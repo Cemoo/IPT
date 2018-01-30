@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="IpTracking" Class="IPTrackingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=IpTracking;User ID=sa" SettingsObjectName="IP_BusinessTracking.Properties.Settings" SettingsPropertyName="IpTrackingConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Department" Member="Departments">
+    <Type Name="Department">
+      <Column Name="AuthID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AuthName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Department_PersonalInformation1" Member="PersonalInformation1s" ThisKey="AuthID" OtherKey="Departman" Type="PersonalInformation1" />
+      <Association Name="Department_PersonalInformation" Member="PersonalInformations" ThisKey="AuthID" OtherKey="Departman" Type="PersonalInformation" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Work]" Member="Works">
+    <Type Name="Work">
+      <Column Name="WID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="WorkName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AddedTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Explanation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DeletedTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Work_Operation" Member="Operations" ThisKey="WID" OtherKey="WorkID" Type="Operation" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoginStatus" Member="LoginStatus">
+    <Type Name="LoginStatus">
+      <Column Name="LoginID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PCName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PersID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LoginDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LogOutDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PersonalInformation1_LoginStatus" Member="PersonalInformation1" ThisKey="PersID" OtherKey="PID" Type="PersonalInformation1" IsForeignKey="true" />
+      <Association Name="PersonalInformation_LoginStatus" Member="PersonalInformation" ThisKey="PersID" OtherKey="PID" Type="PersonalInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mission" Member="Missions">
+    <Type Name="Mission">
+      <Column Name="MID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MissionName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Mission_Operation_Result" Member="Operation_Results" ThisKey="MID" OtherKey="MisID" Type="Operation_Result" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Operation_Result" Member="Operation_Results">
+    <Type Name="Operation_Result">
+      <Column Name="OpResID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OpResName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MisID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Mission_Operation_Result" Member="Mission" ThisKey="MisID" OtherKey="MID" Type="Mission" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Operation" Member="Operations">
+    <Type Name="Operation">
+      <Column Name="OpID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PersID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="WorkID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="MisID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AssignedPers" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="OperationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsClosed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ClosingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Work_Operation" Member="Work" ThisKey="WorkID" OtherKey="WID" Type="Work" IsForeignKey="true" />
+      <Association Name="PersonalInformation1_Operation" Member="PersonalInformation1" ThisKey="PersID" OtherKey="PID" Type="PersonalInformation1" IsForeignKey="true" />
+      <Association Name="PersonalInformation_Operation" Member="PersonalInformation" ThisKey="PersID" OtherKey="PID" Type="PersonalInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PersonalInformation" Member="PersonalInformation1s">
+    <Type Name="PersonalInformation1">
+      <Column Name="PID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Adress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Mail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="P_Image" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Departman" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddedTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DeletedTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PersonalInformation1_LoginStatus" Member="LoginStatus" ThisKey="PID" OtherKey="PersID" Type="LoginStatus" />
+      <Association Name="PersonalInformation1_Operation" Member="Operations" ThisKey="PID" OtherKey="PersID" Type="Operation" />
+      <Association Name="Department_PersonalInformation1" Member="Department" ThisKey="Departman" OtherKey="AuthID" Type="Department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PersonalInformation" Member="PersonalInformations">
+    <Type Name="PersonalInformation">
+      <Column Name="PID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Adress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Mail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="P_Image" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Departman" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddedTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DeletedTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PersonalInformation_LoginStatus" Member="LoginStatus" ThisKey="PID" OtherKey="PersID" Type="LoginStatus" />
+      <Association Name="PersonalInformation_Operation" Member="Operations" ThisKey="PID" OtherKey="PersID" Type="Operation" />
+      <Association Name="Department_PersonalInformation" Member="Department" ThisKey="Departman" OtherKey="AuthID" Type="Department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Log]" Member="Logs">
+    <Type Name="Log">
+      <Column Name="LogID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LogType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Explanation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,17 @@
+C:\Users\Cemal\documents\visual studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\bin\Debug\IP_BusinessTracking.exe.config
+C:\Users\Cemal\documents\visual studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\bin\Debug\IP_BusinessTracking.exe
+C:\Users\Cemal\documents\visual studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\bin\Debug\IP_BusinessTracking.pdb
+C:\Users\Cemal\documents\visual studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\obj\Debug\IP_BusinessTracking.About.resources
+C:\Users\Cemal\documents\visual studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\obj\Debug\IP_BusinessTracking.AddPersonel.resources
+C:\Users\Cemal\documents\visual studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\obj\Debug\IP_BusinessTracking.deneme.resources
+C:\Users\Cemal\documents\visual studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\obj\Debug\IP_BusinessTracking.MainForm.resources
+C:\Users\Cemal\documents\visual studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\obj\Debug\IP_BusinessTracking.Personal.resources
+C:\Users\Cemal\documents\visual studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\obj\Debug\IP_BusinessTracking.Properties.Resources.resources
+C:\Users\Cemal\documents\visual studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\obj\Debug\IP_BusinessTracking.Status.resources
+C:\Users\Cemal\documents\visual studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\obj\Debug\IP_BusinessTracking.StatusWindow.resources
+C:\Users\Cemal\documents\visual studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\obj\Debug\IP_BusinessTracking.csproj.GenerateResource.Cache
+C:\Users\Cemal\documents\visual studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\obj\Debug\IP_BusinessTracking.exe
+C:\Users\Cemal\documents\visual studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\obj\Debug\IP_BusinessTracking.pdb
+C:\Users\Cemal\Documents\Visual Studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\obj\Debug\IP_BusinessTracking.Splash.resources
+C:\Users\Cemal\Documents\Visual Studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\obj\Debug\IP_BusinessTracking.Login.resources
+C:\Users\Cemal\Documents\Visual Studio 2013\Projects\IP_BusinessTracking\IP_BusinessTracking\obj\Debug\IP_BusinessTracking.csprojResolveAssemblyReference.cache

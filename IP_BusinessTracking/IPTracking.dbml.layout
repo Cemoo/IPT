@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.25, 14.375" name="IPTracking">
+  <DataContextMoniker Name="/IPTrackingDataContext" />
+  <nestedChildShapes>
+    <classShape Id="edf6b7e7-99a4-423d-97fd-7d2229ceba15" absoluteBounds="2.5, 7.125, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/IPTrackingDataContext/Department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee36a95d-5d85-49b5-9f4f-f1288828cdab" absoluteBounds="2.515, 7.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d668def-f1a0-4b8e-bbc3-a12425a9efb5" absoluteBounds="12, 5.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/IPTrackingDataContext/Work" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e49d2da1-6c79-45df-a015-55a6077df24c" absoluteBounds="12.015, 5.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="88ae2105-bb4f-4b20-ad76-849ab0cd2dbe" absoluteBounds="8, 6.75, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/IPTrackingDataContext/LoginStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f184398c-b775-45b2-abec-5169a2519754" absoluteBounds="8.015, 7.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d9495ea-b268-453e-80c3-9c9d84981350" absoluteBounds="5.25, 4, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/IPTrackingDataContext/Mission" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d0fb374-dcda-45e9-b847-42becf220f8b" absoluteBounds="5.2650000000000006, 4.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="60330d7d-4ea9-4bd0-86ed-6023cf268cf2" absoluteBounds="8, 4, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/IPTrackingDataContext/Operation_Result" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c459131f-b28c-4d0e-a43b-17deab86c912" absoluteBounds="8.015, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.25 : 4.59699625651042); (8 : 4.59699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/IPTrackingDataContext/Mission/Mission_Operation_Result" />
+      <nodes>
+        <classShapeMoniker Id="8d9495ea-b268-453e-80c3-9c9d84981350" />
+        <classShapeMoniker Id="60330d7d-4ea9-4bd0-86ed-6023cf268cf2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2b5aa462-fb9f-477b-a7ce-6116e73ddf30" absoluteBounds="10, 9.125, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/IPTrackingDataContext/Operation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="02a96d61-66b3-44a4-9fc9-c03358a90e75" absoluteBounds="10.015, 9.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="57133939-ae14-4e0d-9b45-5be6c5740574" absoluteBounds="7.25, 10.625, 2, 3.5016097005208344">
+      <DataClassMoniker Name="/IPTrackingDataContext/PersonalInformation1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dfcb0d80-cfed-4199-893c-47bd93249055" absoluteBounds="7.265, 11.085, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.03125 : 7.40549967447917); (13.03125 : 10.3950512695312); (12 : 10.3950512695312)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/IPTrackingDataContext/Work/Work_Operation" />
+      <nodes>
+        <classShapeMoniker Id="8d668def-f1a0-4b8e-bbc3-a12425a9efb5" />
+        <classShapeMoniker Id="2b5aa462-fb9f-477b-a7ce-6116e73ddf30" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.65625 : 10.625); (8.65625 : 8.7131982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/IPTrackingDataContext/PersonalInformation1/PersonalInformation1_LoginStatus" />
+      <nodes>
+        <classShapeMoniker Id="57133939-ae14-4e0d-9b45-5be6c5740574" />
+        <classShapeMoniker Id="88ae2105-bb4f-4b20-ad76-849ab0cd2dbe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 8.31899251302083); (3.5 : 12.3758048502604); (7.25 : 12.3758048502604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/IPTrackingDataContext/Department/Department_PersonalInformation1" />
+      <nodes>
+        <classShapeMoniker Id="edf6b7e7-99a4-423d-97fd-7d2229ceba15" />
+        <classShapeMoniker Id="57133939-ae14-4e0d-9b45-5be6c5740574" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.25 : 11.1450512695312); (10 : 11.1450512695312)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/IPTrackingDataContext/PersonalInformation1/PersonalInformation1_Operation" />
+      <nodes>
+        <classShapeMoniker Id="57133939-ae14-4e0d-9b45-5be6c5740574" />
+        <classShapeMoniker Id="2b5aa462-fb9f-477b-a7ce-6116e73ddf30" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="abf56c49-1243-42e5-906a-0ad0589bd22d" absoluteBounds="5, 6.25, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/IPTrackingDataContext/PersonalInformation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0d899a39-d3f8-43db-b89c-fa59a3b86f8d" absoluteBounds="5.015, 6.71, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7 : 7.73159912109375); (8 : 7.73159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/IPTrackingDataContext/PersonalInformation/PersonalInformation_LoginStatus" />
+      <nodes>
+        <classShapeMoniker Id="abf56c49-1243-42e5-906a-0ad0589bd22d" />
+        <classShapeMoniker Id="88ae2105-bb4f-4b20-ad76-849ab0cd2dbe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7 : 9.43830485026042); (10 : 9.43830485026042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/IPTrackingDataContext/PersonalInformation/PersonalInformation_Operation" />
+      <nodes>
+        <classShapeMoniker Id="abf56c49-1243-42e5-906a-0ad0589bd22d" />
+        <classShapeMoniker Id="2b5aa462-fb9f-477b-a7ce-6116e73ddf30" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 7.72199625651042); (5 : 7.72199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/IPTrackingDataContext/Department/Department_PersonalInformation" />
+      <nodes>
+        <classShapeMoniker Id="edf6b7e7-99a4-423d-97fd-7d2229ceba15" />
+        <classShapeMoniker Id="abf56c49-1243-42e5-906a-0ad0589bd22d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6ea8b1db-eeab-4b8d-beb9-126a84f64a84" absoluteBounds="5.625, 2, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/IPTrackingDataContext/Log" />
+      <nestedChildShapes>
+        <elementListCompartment Id="21881f83-1902-4294-a438-a7da4637f463" absoluteBounds="5.64, 2.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
